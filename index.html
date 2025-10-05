@@ -35,19 +35,22 @@
             position: relative;
         }
 
-        .slide {
+       .slide {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             padding: 60px;
-            max-width: 1200px;
-            width: 100%;
-            min-height: 600px;
+            width: 1200px;
+            height: 700px; /* fixed height for all slides */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
             animation: slideIn 0.5s ease-out;
+            overflow: hidden; /* hides overflow content */
         }
-
+        
         @keyframes slideIn {
             from {
                 opacity: 0;
