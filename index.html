@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ORRDS Business Plan Presentation</title>
+    <title>ORRDRS Business Plan Presentation</title>
     <style>
         * {
             margin: 0;
@@ -31,26 +31,43 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 40px;
+            padding: 10px;
             position: relative;
+
+
         }
 
-       .slide {
+        .slide {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             padding: 60px;
             width: 1200px;
-            height: 700px; /* fixed height for all slides */
+            height: 600px; /* same size for all slides */
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
             animation: slideIn 0.5s ease-out;
-            overflow: hidden; /* hides overflow content */
+            overflow-y: auto; /* allows scrolling inside */
+            overflow-x: hidden; /* prevents horizontal overflow */
         }
         
+        
+        .slide::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .slide::-webkit-scrollbar-thumb {
+            background: rgba(96, 165, 250, 0.4);
+            border-radius: 10px;
+        }
+        
+        .slide::-webkit-scrollbar-thumb:hover {
+            background: rgba(96, 165, 250, 0.7);
+        }
+
         @keyframes slideIn {
             from {
                 opacity: 0;
@@ -332,7 +349,7 @@
             `
                 <div class="centered">
                     <div class="logo">🛰️</div>
-                    <h1>ORRDS</h1>
+                    <h1>ORRDRS</h1>
                     <p class="subtitle">Orbital Resource Recovery & Debris Remediation System</p>
                     <div class="highlight-box">
                         <h3>Transforming Space Debris from Threat to Treasure</h3>
@@ -376,7 +393,7 @@
 
             // Slide 3: Our Solution
             `
-                <h2>The ORRDS Solution</h2>
+                <h2>The ORRDRS Solution</h2>
                 <p class="subtitle">Autonomous orbital processors that turn debris into profit</p>
                 
                 <div class="grid-3">
@@ -556,7 +573,7 @@
 
             // Slide 7: Competitive Advantage & Call to Action
             `
-                <h2>Why ORRDS Wins</h2>
+                <h2>Why ORRDRS Wins</h2>
                 
                 <div class="grid-3">
                     <div class="card">
